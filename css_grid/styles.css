@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+/* .container {
+    display: grid;
+    grid-template-columns: [first] 300px [second] 50px [third] 100px;
+    grid-template-rows:  200px 50px;
+} */
+
+/* grid template */
+/* column (세로)
+row (가로) */
+/* 여기서는 트랙(track)이라고 부른다. */
+
+
+/* 위와 같은 경우 세번째 row부터는 지정된 높이가 없으므로 자식요소만큼의 높이 (=auto)를 갖게 된다. */
+
+
+
+/* .container {
+    display: grid;
+    width: 900px;
+    grid-template-columns: repeat(9,100px);
+} */
+
+
+/* 컨테이너 크기가 고정되어 있지 않은 경우라면, 아이템 크기를 비율로 지정하고 싶을 때가 있다.
+%를 사용해도 되지만, 유지보수 등을 고려해 좀 더 유연한 단위를 지정하고 싶을 때가 있다.
+이 때는 fr을 사용하여 사용 가능한 공간의 일정 비율을 나타낸다.
+fraction(분수) */
+
+
+
+/* .container {
+    width: 1000px;
+    display: grid;
+    grid-template-columns: 120px repeat(3, 1fr) 2fr 10%;
+} */
+
+
+.container {
+    width: 900px;
+    height: 900px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows : repeat(3,1fr);
+}
+
+
+/* grid 라인을 지키며 첫 번째 아이템이 1번 줄에서 4번 줄 까지 늘어나도록 */
+/* .item1 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+} */
+
+
+/* 끝 지점을 지정하는 게 귀찮다면, span을 이용해 column 너비를 지정할 수도 있다. */
+.item4 {
+    grid-column-end: span 2;
+}
+
+.item6 {
+    grid-column-end : span 3;
+}

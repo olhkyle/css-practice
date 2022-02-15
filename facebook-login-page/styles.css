@@ -1,0 +1,237 @@
+* {
+    box-sizing: border-box;
+    margin:0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+textarea,
+input {
+    font-family: "DM Sans", sans-serif;
+    font-size: 16px;
+}
+
+button:focus,
+button:active,
+input:focus,
+input:active,
+textarea:focus,
+textarea:active {
+    outline: none;
+    box-shadow: none;
+}
+
+ul,
+ol,
+li{
+    list-style-type: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+body {
+    width : 100%;
+    height: 100vh;
+}
+
+#wrap {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 72px 0 112px 0;
+    background-color: #f0f2f5;
+}
+
+
+.section .col-12:first-child h1{
+    display: none;
+}
+
+.facebook-img {
+    width: 300px;
+    padding: 112px 0 16px;
+}
+
+
+.facebook-img img{
+    width: 100%;
+    height: auto;
+    margin: -28px;
+}
+
+
+.facebook-p {
+    max-width: 500px;
+    font-size: 28px;
+    line-height: 1.1428571429;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.section .col-12:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.login-modal {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 396px;
+    margin-top: 40px;
+    padding: 10px 0 24px;
+    background-color: #FFF;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);;
+}
+
+.login-modal input {
+    width: 364px;
+    margin: 6px 0;
+    padding: 14px 17px;
+    border: 1px solid #dddfe2;
+    border-radius: 6px;
+    color: #dddfe2
+}
+
+
+.login-modal input:focus {
+    border-color: #1877F2;
+}
+
+.login-modal .login-btn {
+    width: 364px;
+    height: 48px;
+    margin: 6px 0;
+    padding: 0 16px;
+    background-color: #1877F2;
+    border: none;
+    border-radius: 6px;
+    font-size: 20px;
+    color: #FFF;
+}
+
+.login-modal .login-btn:hover {
+    background-color: #1566cf;
+}
+
+.login-modal .forgot-pw {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    color: #1877F2;
+    margin-top: 16px;
+}
+
+.login-modal .forgot-pw:hover {
+    text-decoration: underline;
+}
+
+/* 빈 div를 만들고 구분선 만들기 */
+.login-modal .guide-line {
+    width: 364px;
+    margin: 20px 16px;
+    border: 0.01px solid #dadde1;
+}
+
+.login-modal .create-new-id {
+    padding: 0 16px;
+    border-radius: 6px;
+    border-color: none;
+    color: #FFF;
+    background-color: #42B72A;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 2.8235294118;
+}
+
+.login-modal .create-new-id:hover {
+    border-color: #36a420;
+    background-color: #36a420;;
+}
+
+.login-add {
+    margin: 28px 0 0;
+    font-size: 14px;
+}
+.login-add a{
+    font-weight: 600;
+}
+
+.login-add a:hover{
+    text-decoration: underline;
+    color: #000;
+}
+
+
+/* footer */
+
+.footer {
+    width: 100%;
+    padding: 20px 0 0;
+    position: fixed;
+    bottom: 0;
+    background-color: #FFF;
+    color: #8A8D91;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.footer .footer-links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: -20px;
+}
+
+.footer .footer-links .footer-link{
+    margin-left: 20px;
+}
+
+.copyright-cover {
+    margin: 20px 0
+}
+
+.tag {
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 960px){
+
+    #wrap {
+        padding: 36px 0 112px 0;
+    }
+
+    .facebook-img {
+        padding: 56px 0 16px;
+    }
+
+    .section .col-12:first-child{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+
+
+/* fix container width */
+
+@media screen and (min-width: 1200px){
+    .container{
+        max-width: 1060px;
+    }
+}

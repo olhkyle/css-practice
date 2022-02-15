@@ -1,0 +1,169 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    /* position: relative; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Inter', sans-serif, 'Roboto', sans-serif;
+    background-color: #000;
+}
+
+button:focus,
+button:active {
+    outline:none;
+    box-shadow: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul, li {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+header h1{
+    margin-bottom: 20px;
+    color: #FFF;
+    font-size: 30px;
+    line-height: 1.5;
+    font-weight: 700;
+}
+
+
+.content-list {
+    width: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scroll-Btn{
+    display: block;
+    border: 1px solid #FFF;
+    border-radius: 50%;
+    background-color: transparent;
+}
+
+.scroll-Btn:first-child {
+    margin-right: 15px;
+}
+
+.scroll-Btn:last-child {
+    margin-left: 15px;
+}
+
+.scroll-Btn:hover {
+    background-color: #FFF;
+}
+
+.scroll-Btn span {
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+.scroll-Btn:hover span {
+    color: #000;
+}
+
+
+.nav-bar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 600px;
+    height: auto;
+    padding: 25px 15px 15px 15px;
+    overflow-x: scroll;
+    border: 1px dashed #FFF;
+    border-radius: 10px;
+}
+
+.nav-bar::-webkit-scrollbar {
+    display: none;
+}
+
+
+.dropdown {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-right: 10px;
+    transition: height ease-in-out 10000ms;
+}
+
+.dropdown-btn {
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 12px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    border: 1px solid #FFF;
+    border-radius: 5px;
+    color: #FFF;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.dropdown-btn:hover {
+    color: #000;
+    background-color: #FFF;
+}
+
+
+.button-list {
+    display: none;
+    width: 100px;
+    height: auto;
+    transition: height 2000ms ease;
+}
+
+.dropdown:active .button-list,
+.dropdown:focus .button-list{
+    display: block;
+    height: 100%;
+}
+
+.button-list li {
+    display: block;
+    width: auto;
+    margin-bottom: 10px;
+}
+
+.button-list li a{
+    display: block;
+    padding: 5px 0;
+    color: #FFF;
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    text-align: center;
+    transition: color 250ms ease, background-color 300ms ease, transform 300ms ease;
+}
+
+.button-list li a:hover {
+    width: auto;
+    color: #000;
+    background-color: #FFF;
+    border-radius: 3px;
+    font-weight: 700;
+}
+
