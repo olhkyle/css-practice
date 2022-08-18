@@ -1,0 +1,240 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+}
+
+
+/* header */
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 18px;
+    height: 50px;
+}
+
+.user-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-area{
+    margin-right: 10px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.user-img{
+    background-image: url(./img/anderssune.jpeg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.user-nickname{
+    font-size: 12px;
+    line-height: 22px;
+    font-weight: 700;
+    color: #000;
+}
+
+.ellipse-group{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ellipse{
+    margin: 0 1.2px;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background-color: #000;
+}
+
+
+/* section */
+.section{
+    width: 100%;
+    height: 375px;
+}
+
+.post-img-area{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 375px;
+    border: 0.5px solid #dadada;
+}
+
+.post-img{
+    width: 100%;
+    height: auto;
+}
+
+
+/* footer */
+.footer{
+    padding: 9px 9px 9px 12px;
+}
+
+
+
+/* footer - post contribution */
+.post-contribution{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 7px;
+}
+
+
+.ico-group{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ico-group span{
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-right: 14px;
+}
+
+.carousel{
+    position: absolute;
+    left: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    flex-shrink: 0;
+    z-index: 1;
+}
+
+.ellipse-big{
+    margin-right: 6.4px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #c4c4c4;
+}
+
+.ellipse-big:first-child{
+    background-color: #32b5ff;
+}
+
+.bookmark{
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url(./img/bookmark.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+
+
+.ico-heart{
+    background-image: url(./img/Heart.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+
+.ico-comment{
+    background-image: url(./img/comment.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+
+}
+
+.ico-share{
+    background-image: url(./img/share.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+
+
+/* footer / post-content */
+.btn-like{
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 22px;
+    transition: color 50ms ease;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+.like:hover{
+    color: red;
+}
+
+
+.desc{
+    max-height: 150px;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 22px;
+    /* 글줄이 길어지면 ...표시 */
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.desc strong{
+    font-weight: 700;
+}
+
+.post-input{
+    position: relative;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+}
+
+.comment input{
+    display: inline-block;
+    width: 100%;
+    height: 30px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    outline: #999999;
+}
+
+.comment input:active,
+.comment input:focus{
+    border: 0.5px solid rgba(0,0,0,0.1);
+}
+
+.comment input::placeholder{
+    color: #999999;
+}
+
+.post-input button{
+    position: absolute;
+    right: 10px;
+    border: none;
+    outline: none;
+    background-color: #fff;
+}
+
