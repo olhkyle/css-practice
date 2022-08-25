@@ -1,0 +1,419 @@
+body{
+    position: relative;
+}
+
+.wrap{
+    width: 80%;
+    max-width: 1920px;
+    height: 100vh;
+    margin: 0 auto;
+    /* background-color: white; */
+}
+
+.black-bg{
+    position: absolute;
+    left: 0;
+    width: 100vw;
+    height: 850px;
+    background-color: #000;
+    z-index: -1;
+}
+
+/* header */
+
+.header{
+    position: relative;
+    padding-top: 20px;
+    background-color: black;
+    text-align: center;
+    z-index: 10;
+}
+
+header a{
+    font-weight: 700;
+    color: white;
+}
+
+header .gnb{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 280px 1fr 280px;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    "logo gnb-menu menu"
+    "search search search"
+    ;
+}
+
+
+header .gnb .logo {
+    grid-area: logo;
+    /* display: grid에 grid-template-rows 부분에 의해 auto로 설정되어 있기 때문에 중앙정렬 */
+    display: flex;
+    align-items: center; 
+    color: white;
+
+}
+
+header .gnb .gnb-menu {
+    grid-area : gnb-menu;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+}
+
+header .gnb .gnb-menu ul{
+    grid-area : gnb-menu;
+    width: 70%; /* grid 설정시 1fr이므로 1fr의 70%를 의미 */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .gnb .gnb-menu ul li{
+    position: relative;
+    padding-bottom: 10px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+header .gnb .gnb-menu ul .active::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 15px;
+    height: 2px;
+    background-color: #fff;
+    transform: translate(-50%);
+}
+header .gnb .gnb-menu ul li:not(.active):hover{
+    color: lightgrey;
+}
+
+header .gnb .gnb-menu ul li:not(.active):hover::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 5px;
+    height: 2px;
+    background-color: #fff;
+    transform: translate(-50%);
+}
+
+header .gnb .menu{
+    grid-area : menu;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin-left: 20%;
+    color: white;
+}
+
+
+header .gnb .menu .menu-hover{
+    padding: 5px 10px;
+    border-radius: 30px;
+}
+
+header .gnb .menu .menu-hover:hover{
+    background-color: rgba(172,172,172, 0.4);
+}
+
+header .gnb .menu .profile{
+    padding: 5px 10px;
+    border-radius: 30px;
+    font-weight: 600;
+    color: grey;
+    background-color: white;
+}
+
+
+
+header .gnb .search{
+    grid-area: search;
+    color : black;
+    margin : 0 auto;
+    width: 70%;
+}
+
+header .gnb .search .search-list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 50px;
+    background-color: #fff;
+}
+
+header .gnb .search .search-list li{
+    position: relative;
+    width : 25%;
+    padding: 10px 50px 10px 20px;
+    font-weight: 600;
+    border-radius: 50px;
+    text-align: left;
+}
+
+header .gnb .search .search-list li:not(:first-child)::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 1px;
+    height: calc(100% - 40px);
+    background-color: #e5e5e5;
+    transform: translate(0, -50%);
+}
+
+header .gnb .search .search-list li:hover{
+    background-color: #e5e5e5;
+}
+
+header .gnb .search .search-list li span{
+    font-size: 10px;
+    font-weight: 500;
+}
+
+
+
+/* notice */
+
+.notice{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    background-color: #ff385c;
+    border-radius: 20px;
+    text-align: center;
+    z-index: 100;
+}
+
+
+.notice p {
+    margin-bottom : 2rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.8rem;
+    color : white;
+}
+
+.notice button{
+    padding: 5px 15px;
+    border: 1px solid white;
+    border-radius: 14px;
+    font-weight: 600;
+    color: white;
+    background-color: inherit;
+    cursor: pointer;
+}
+
+
+/* main banner */
+
+.main-banner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 600px;
+    padding-bottom: 50px;
+    /* border: 1px solid black; */
+    border-radius: 14px;
+    background-image: url('https://a0.muscache.com/im/pictures/11bd9fc9-4ca9-4208-b449-bdc63a1969b9.jpg?im_w=320');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    z-index: 10;
+}
+
+.main-banner::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 14px;
+    background-color: #000;
+    opacity: 0.15;
+}
+
+.main-banner .content {
+    color: #fff;
+    text-align: center;
+}
+
+.main-banner .content p{
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.main-banner .content button{
+    padding: 5px 10px;
+    border: 1px solid white;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    background-color: white;
+}
+
+
+/* idea */
+
+.city{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+
+.city .card{
+    width: 25%; /* 부모에 flex를 쓰고 나서, 최대한 25%에 가까운 사이즈를 유지하려고 설정, 단 25%는 아니다. margin-right : 30px있기 때문  */ 
+    min-width : 250px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.city .card:last-child{
+    margin-right: 0;
+}
+
+.city .card img{
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 15px 15px 0 0 ;
+}
+
+.city .card figcaption{
+    height: calc(200px - 48px);
+    padding: 24px 16px;
+    border-radius: 0 0 15px 15px;
+    color: white;
+}
+
+.city .card figcaption p{
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+}
+
+.city .card figcaption span{
+    font-size: 0.8rem;
+    font-weight: 400;
+    
+}
+
+/* expression */
+
+.expression {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 25px;
+    grid-template-areas: 
+    "heading heading"
+    "div1 div2"
+    ;
+    margin-bottom: 50px;
+}
+
+.expression .photo-div{
+    width: 100%;
+    height: calc(700px - calc(60px * 2));
+    padding: 60px;
+    border-radius: 14px;
+}
+
+.expression .photo-div:not(last-child){
+    grid-area: div1;
+    background-image: url('./asset/SAM_2765.JPG');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+
+.expression .photo-div:last-child{
+    grid-area: div2;
+    background-image: url('./asset/SAM_2767.JPG');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.expression .photo-div p{
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 2.5rem;
+    color : white;
+}
+
+.expression .photo-div button{
+    margin-top: 1rem;
+    padding: 8px 15px;
+    border-radius: 14px;
+    background-color: white;
+    font-weight: 500;
+    color: #0c0c0c;
+}
+
+.expression .photo-div button:hover{
+    background-color: lightgrey;
+}
+
+
+
+@media screen and (max-width: 767px){
+
+    .wrap{
+        width: 90%;
+    }
+    .expression {
+        display: grid;
+        grid-template-rows: auto auto auto; /* 가로 줄 3개*/ 
+        grid-template-columns: 1fr; /* 세로 줄 1개*/
+        grid-gap: 15px;
+        grid-template-areas: 
+        "heading"
+        "div1"
+        "div2"
+        ;
+        margin-bottom: 50px;
+    }
+
+    .city{
+        -ms-overflow-style: none; /*ie*/
+        scrollbar-width: none; /*firefox*/
+    }
+
+    /* chrome */
+    .city::-webkit-scrollbar{
+        display: none;
+    } 
+
+    .city .card{
+        margin-right: 15px;
+    }
+
+
+    .city .card figcaption p{
+        font-size: 1.2rem;
+        font-weight: 600;
+        line-height: 1.4rem;
+        padding-bottom: 0.5rem;
+    }
+}
